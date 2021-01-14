@@ -1,0 +1,25 @@
+﻿body {
+
+}
+
+label {
+    font-size: 20px;
+    color: darkslategrey;
+    width: 120px;
+    display: inline-block;
+}
+
+input {
+
+}
+
+input.submit {
+    background-color: #0eaacd;
+    font: bold;
+    font-size: 24px;
+    color: white;
+}
+
+img {
+    height: 200px;
+}
