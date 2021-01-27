@@ -1,70 +1,74 @@
-﻿// Build a JavaScript program that calculates and displays both a final percentage and a letter grade using the
+﻿$("#submitButton").click(
+
+    // Build a JavaScript program that calculates and displays both a final percentage and a letter grade using the
     // "Grade Calculator" form entries based on the weights listed in the syllabus.
 
-function calculateGrade() {
-    // Get data from form
-    var assignmentsPct = parseFloat(document.getElementById("assignmentsPct").value);
-    var groupProjectPct = parseFloat(document.getElementById("groupProjectPct").value);
-    var quizzesPct = parseFloat(document.getElementById("quizzesPct").value);
-    var examsPct = parseFloat(document.getElementById("examsPct").value);
-    var intexPct = parseFloat(document.getElementById("intexPct").value);
-    var gradeLetter = "";
+function () { //calculateGrade
+        // Get data from form
+        var AssignmentsPct = parseFloat($("#AssignmentsPct").val());
+        var GroupProjectPct = parseFloat($("#GroupProjectPct").val());
+        var QuizzesPct = parseFloat($("#QuizzesPct").val());
+        var ExamsPct = parseFloat($("#ExamsPct").val());
+        var IntexPct = parseFloat($("#IntexPct").val());
+        var GradeLetter = "";
 
 
-    // Calculate the grade percentage
-    var assignmentsGrade = assignmentsPct * .5;
-    var groupProjectGrade = groupProjectPct * .1;
-    var quizzesGrade = quizzesPct * .1;
-    var examsGrade = examsPct * .2;
-    var intexGrade = intexPct * .1;
+        // Calculate the grade percentage
+        var AssignmentsGrade = AssignmentsPct * .5;
+        var GroupProjectGrade = GroupProjectPct * .1;
+        var QuizzesGrade = QuizzesPct * .1;
+        var ExamsGrade = ExamsPct * .2;
+        var IntexGrade = IntexPct * .1;
 
-    var gradePct = assignmentsGrade + groupProjectGrade + quizzesGrade + examsGrade + intexGrade;
+        var GradePct = AssignmentsGrade + GroupProjectGrade + QuizzesGrade + ExamsGrade + IntexGrade;
 
-    // Determine the grade letter
-    if (gradePct >= 94) {
-        gradeLetter = "A";
-    }
-    else if (gradePct >= 90) {
-        gradeLetter = "A-";
-    }
-    else if (gradePct >= 87) {
-        gradeLetter = "B+";
-    }
-    else if (gradePct >= 84) {
-        gradeLetter = "B";
-    }
-    else if (gradePct >= 80) {
-        gradeLetter = "B-";
-    }
-    else if (gradePct >= 77) {
-        gradeLetter = "C+";
-    }
-    else if (gradePct >= 74) {
-        gradeLetter = "C";
-    }
-    else if (gradePct >= 70) {
-        gradeLetter = "C-";
-    }
-    else if (gradePct >= 67) {
-        gradeLetter = "D+";
-    }
-    else if (gradePct >= 64) {
-        gradeLetter = "D";
-    }
-    else if (gradePct >= 60) {
-        gradeLetter = "D-";
-    }
-    else if ((gradePct < 60) && (gradePct >= 0)) {
-        gradeLetter = "E";
-    }
-    else {
-        alert("Error");
-        gradeLetter = "Not found";
-    }
+        // Determine the grade letter
+        if (GradePct >= 94) {
+            GradeLetter = "A";
+        }
+        else if (GradePct >= 90) {
+            GradeLetter = "A-";
+        }
+        else if (GradePct >= 87) {
+            GradeLetter = "B+";
+        }
+        else if (GradePct >= 84) {
+            GradeLetter = "B";
+        }
+        else if (GradePct >= 80) {
+            GradeLetter = "B-";
+        }
+        else if (GradePct >= 77) {
+            GradeLetter = "C+";
+        }
+        else if (GradePct >= 74) {
+            GradeLetter = "C";
+        }
+        else if (GradePct >= 70) {
+            GradeLetter = "C-";
+        }
+        else if (GradePct >= 67) {
+            GradeLetter = "D+";
+        }
+        else if (GradePct >= 64) {
+            GradeLetter = "D";
+        }
+        else if (GradePct >= 60) {
+            GradeLetter = "D-";
+        }
+        else if ((GradePct < 60) && (GradePct >= 0)) {
+            GradeLetter = "E";
+        }
+        else {
+            alert("Error");
+            GradeLetter = "Not found";
+        }
 
 
-    // Print the information to the web page
-    alert(gradePct + "%, " + gradeLetter);
-    document.getElementById("finalPercent").innerHTML = "Final Percentage: " + gradePct + "%";
-    document.getElementById("finalGrade").innerHTML = "Final Grade: " + gradeLetter;
-}
+        // Print the information to the web page
+        alert(GradePct + "%, " + GradeLetter);
+        $("#FinalPercent").html("Final Percentage: " + GradePct + "%");
+        $("#FinalGrade").html("Final Grade: " + GradeLetter);
+    }
+
+);

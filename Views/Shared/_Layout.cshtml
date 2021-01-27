@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sarah Anderson First ASP.NET Web App</title>
+    <link rel="icon" href="~/img/KylieButterfly.jpg">
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <header>
+        <h1>@ViewBag.Header</h1>
+
+        <!--Navigation-->
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="GradeCalculator">Grade Calculator</a></li>
+            </ul>
+        </menu>
+    </header>
+  
+    @RenderBody()
+
+    <footer>Footer</footer>
+
+    <!--JavaScript-->
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/gradecalculator.js"></script>
+</body>
+</html>
